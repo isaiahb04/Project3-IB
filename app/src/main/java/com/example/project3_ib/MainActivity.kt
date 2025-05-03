@@ -71,6 +71,7 @@ fun ImageSwitcherApp() {
                     painter = painterResource(R.drawable.ic_red),
                     contentDescription = "Red",
                     modifier = Modifier.size(24.dp)
+                    
                 )
                 Spacer(modifier = Modifier.width(8.dp))
                 Text("Red", color = Color.White)
