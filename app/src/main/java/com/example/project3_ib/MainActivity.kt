@@ -51,35 +51,61 @@ fun ImageSwitcherApp() {
         }
 
         Row(
-            modifier = Modifier.fillMaxWidth(),
+            modifier = Modifier
+                .fillMaxWidth()
+                .padding(top = 16.dp),
             horizontalArrangement = Arrangement.SpaceEvenly
         ) {
+            val buttonModifier = Modifier
+                .weight(1f)
+                .height(60.dp)
+                .padding(horizontal = 4.dp)
+
             Button(
                 onClick = { currentImage = R.drawable.img1 },
-                colors = ButtonDefaults.buttonColors(containerColor = Color.Red)
+                colors = ButtonDefaults.buttonColors(containerColor = Color.Red),
+                modifier = buttonModifier,
+                shape = MaterialTheme.shapes.medium
             ) {
-                Icon(painter = painterResource(R.drawable.ic_red), contentDescription = null)
+                Icon(
+                    painter = painterResource(R.drawable.ic_red),
+                    contentDescription = "Red",
+                    modifier = Modifier.size(24.dp)
+                )
                 Spacer(modifier = Modifier.width(8.dp))
-                Text("Red")
+                Text("Red", color = Color.White)
             }
 
             Button(
                 onClick = { currentImage = R.drawable.img2 },
-                colors = ButtonDefaults.buttonColors(containerColor = Color.Green)
+                colors = ButtonDefaults.buttonColors(containerColor = Color.Green),
+                modifier = buttonModifier,
+                shape = MaterialTheme.shapes.medium
             ) {
-                Icon(painter = painterResource(R.drawable.ic_green), contentDescription = null)
+                Icon(
+                    painter = painterResource(R.drawable.ic_green),
+                    contentDescription = "Green",
+                    modifier = Modifier.size(24.dp)
+                )
                 Spacer(modifier = Modifier.width(8.dp))
-                Text("Green")
+                Text("Green", color = Color.White)
             }
 
             Button(
                 onClick = { currentImage = R.drawable.img3 },
-                colors = ButtonDefaults.buttonColors(containerColor = Color.Blue)
+                colors = ButtonDefaults.buttonColors(containerColor = Color.Blue),
+                modifier = buttonModifier,
+                shape = MaterialTheme.shapes.medium
             ) {
-                Icon(painter = painterResource(R.drawable.ic_blue), contentDescription = null)
+                Icon(
+                    painter = painterResource(R.drawable.ic_blue),
+                    contentDescription = "Blue",
+                    modifier = Modifier.size(24.dp)
+                )
                 Spacer(modifier = Modifier.width(8.dp))
-                Text("Blue")
+                Text("Blue", color = Color.White)
             }
         }
+
     }
 }
